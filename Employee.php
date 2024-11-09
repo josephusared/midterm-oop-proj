@@ -5,6 +5,7 @@ abstract class Employee {
     protected string $address;
     protected int $age;
     protected string $companyName;
+    
 
     public function __construct(string $name, string $address, int $age, string $companyName) {
         $this->name = $name;
@@ -13,10 +14,12 @@ abstract class Employee {
         $this->companyName = $companyName;
     }
 
+
+
     abstract public function calculatePay(): float;
 
     public function getDetails(): string {
-        return "{$this->name}, {$this->address}, Age: {$this->age}, Company: {$this->companyName}";
+        return "\nName     : {$this->name}\nAddress  : {$this->address}\nAge      : {$this->age}\nCompany  : {$this->companyName}";
     }
 }
 
