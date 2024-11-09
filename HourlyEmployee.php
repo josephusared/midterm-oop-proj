@@ -17,7 +17,7 @@ class HourlyEmployee extends Employee {
     }
 
     public function getDetails(): string {
-        return parent::getDetails() . ", Type: Hourly Employee";
+        return parent::getDetails() . "\nType     : Hourly Employee";
     }
 }
 
