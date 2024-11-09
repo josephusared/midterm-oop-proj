@@ -10,16 +10,15 @@ class CommissionEmployee extends Employee {
     public function __construct(string $name, string $address, int $age, string $companyName, float $regularSalary, int $itemSold, float $commissionRate) {
         parent::__construct($name, $address, $age, $companyName);
         $this->regularSalary = $regularSalary;
-        $this->itemSold = $itemSold;
+        $this->itemSold = $itemSold     ;
         $this->commissionRate = $commissionRate;
     }
 
     public function calculatePay(): float {
         return $this->regularSalary + ($this->itemSold * $this->commissionRate);
     }
-
     public function getDetails(): string {
-        return parent::getDetails() . ", Type: Commission Employee";
+        return parent::getDetails() . "\nType     : Commission Employee";
     }
 }
 
