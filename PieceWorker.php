@@ -11,14 +11,11 @@ class PieceWorker extends Employee {
         $this->numberItems = $numberItems;
         $this->wagePerItem = $wagePerItem;
     }
-
     public function calculatePay(): float {
         return $this->numberItems * $this->wagePerItem;
     }
-
     public function getDetails(): string {
-        return parent::getDetails() . ", Type: Piece Worker";
+        return parent::getDetails() . "\nType     : Piece Worker";
     }
 }
-
 ?>
